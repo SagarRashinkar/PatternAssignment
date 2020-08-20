@@ -6,8 +6,19 @@ pattern=^[A-Z]{3}
 
 if [[ $firstName =~ $pattern ]]
 then
-	echo "name is valid";
+	echo "first name is valid";
 else
-	echo "name is invalid";
+	echo "first name is invalid";
 fi
 
+#UseCase 2 =>
+
+read -p "enter last name:" lastName
+pattern=^[A-Z]{3}
+
+if [[ $lastName =~ $pattern ]]
+then
+	echo "last name is valid";
+else
+	echo "last name is invalid";
+fi
