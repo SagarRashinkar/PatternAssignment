@@ -94,3 +94,15 @@ else
 	echo "invalid";
 fi
 
+# UseCase 9 => clear all email samples
+
+read -p "Enter email: " email
+pattern="^[a-zA-Z]+[a-zA-Z0-9\#\.\!\$\_]*\@[a-z]*\.(co|in|com)$"
+
+if [[ "$email" =~ $pattern ]]
+then
+	echo "Email address is valid";
+else
+	echo "Email address is invalid";
+fi
+
