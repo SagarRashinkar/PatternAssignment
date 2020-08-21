@@ -59,9 +59,9 @@ else
 fi
 
 # UseCase 6 => Password Rule2
-
+	
 read -p "enter password in Case:" pass
-pat="^[A-Z]{1}[a-z]{8}"
+pat="^[A-Z]{1}[a-z]{7}"
 
 if [[ $pass =~ $pat ]]
 then
@@ -70,4 +70,15 @@ else
 	echo "Password in invalid";
 fi
 
+# UseCase 7 => Password Rule3
+
+read -p "enter password with at least 1 numeric value:" pass
+pat="^[A-Z][a-z]{6}[a-z]+[0-9]{1}"
+
+if [[ $pass =~ $pat ]]
+then
+	echo "valid";
+else
+	echo "invalid";
+fi
 
