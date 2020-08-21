@@ -2,7 +2,7 @@
 
 #UseCase 1=> check valid first name
 read -p "enter first name:" firstName
-pattern=^[A-Z]{3}
+pattern=^[A-Z]{1}[a-z]{2}
 
 if [[ $firstName =~ $pattern ]]
 then
@@ -14,7 +14,7 @@ fi
 #UseCase 2 => check valid last name
 
 read -p "enter last name:" lastName
-pattern=^[A-Z]{3}
+pattern=^[A-Z]{1}[a-z]{2}
 
 if [[ $lastName =~ $pattern ]]
 then
@@ -57,4 +57,17 @@ then
 else
 	echo "password is invalid";
 fi
+
+# UseCase 6 => Password Rule2
+
+read -p "enter password in Case:" pass
+pat="^[A-Z]{1}[a-z]{8}"
+
+if [[ $pass =~ $pat ]]
+then
+	echo "Password is valid";
+else
+	echo "Password in invalid";
+fi
+
 
